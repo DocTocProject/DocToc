@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">DocHome</string>
+    <string name="feedbacktitle">DocHome</string>
+    <string name="feedbackname">DocHome</string>
+    <string name="title_activity_maps">Map</string>
+
+</resources>
