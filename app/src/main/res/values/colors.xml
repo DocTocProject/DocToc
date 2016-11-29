@@ -4,7 +4,8 @@
     <color name="colorPrimaryDark">#000000</color>
     <color name="bleufonce">#12355A</color>
     <color name="colorAccent">#9575CD</color>
-    <color name="vert">#CCFFCC</color>
-    <color name="bleu">#128FCF</color>
     <color name="blanc">#FFFFFF</color>
+    <color name="bleu">#009688</color>
+    <color name="noir">#000000</color>
+
 </resources>
