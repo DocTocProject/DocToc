@@ -13,67 +13,59 @@
         android:weightSum="1">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="sans-serif-light"
             android:gravity="center_horizontal"
-            android:text="DocHome est disponible à Paris et toute ses régions!"
-            android:textColor="@color/colorPrimary"
-            android:textSize="30dp"
+            android:text="Fini les salles d'attentes !  "
+            android:textColor="@color/bleu"
+            android:textSize="20dp"
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:fontFamily="sans-serif-light"
             android:gravity="center_horizontal"
-            android:text="Médecins diplomés et notés"
-            android:textSize="25dp" />
+            android:text="Être malade c'est déjà assez pénible !  "
+            android:textColor="@color/bleu"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_width="306dp"
+            android:layout_height="44dp"
+            android:layout_marginBottom="50dp"
+            android:fontFamily="sans-serif-light"
             android:gravity="center_horizontal"
-            android:text="Récapitulatif de votre consultation"
-            android:textSize="25dp" />
+            android:text="N'attendez plus !  "
+            android:textColor="@color/bleu"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:gravity="center_horizontal"
-            android:text="Suivi personnalisé du médecin"
-            android:textSize="25dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:gravity="center_horizontal"
-            android:text="Consultation directement chez vous"
-            android:textSize="25dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:gravity="center_horizontal"
-            android:text="Plus de salle d'attente"
-            android:textSize="25dp" />
-
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="160dp"
+            android:layout_height="248dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="3.33"
+            android:src="@drawable/Doctor1" />
 
         <Button
             android:id="@+id/bStart"
             style="?android:attr/buttonStyleSmall"
-            android:layout_width="fill_parent"
-            android:layout_height="50dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
-            android:background="@color/colorPrimary"
+            android:layout_width="284dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:background="@color/bleu"
+            android:fontFamily="sans-serif-light"
             android:onClick="OnClickStater"
-            android:text="Utiliser DocHome !"
-            android:textColor="@color/blanc" />
+            android:text="Utiliser DocToc !"
+            android:textAllCaps="false"
+            android:textColor="@color/blanc"
+            android:textSize="20dp" />
 
     </LinearLayout>
 </ScrollView>

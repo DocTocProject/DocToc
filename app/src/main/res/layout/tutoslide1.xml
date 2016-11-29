@@ -10,51 +10,64 @@
 
 
     <TextView
-        android:layout_width="269dp"
+        android:layout_width="308dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-light"
         android:gravity="center_horizontal"
-        android:text="Consultation à Domicile"
-        android:textColor="@color/colorPrimary"
-        android:textSize="35sp"
+        android:text=" Recevez la visite d'un médecin où que vous soyez !"
+        android:textColor="@color/bleu"
+        android:textSize="30dp"
         android:textStyle="bold" />
 
     <TextView
+        android:layout_width="344dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="18dp"
+        android:gravity="center_horizontal"
+        android:text="  Entrez les coordonnées de votre lieu de prise en charge"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="338dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="18dp"
+        android:gravity="center_horizontal"
+        android:text=" DocToc vous attribue le médecin disponible le plus proche de vous "
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:gravity="center_horizontal"
+        android:text=" Vous n'attendrez pas plus de 30 minutes "
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="337dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:gravity="center_horizontal"
+        android:text=" Si aucun médecin n'est disponible immédiatement, il vous sera proposer de prendre rendez-vous dans la journée"
+        android:textSize="20dp" />
+
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:gravity="center_horizontal"
-        android:text="Vérifiez la disponibilité des médecins"
-        android:textSize="25dp" />
+        android:text=" Ca y est, le médecin est déjà là ! "
+        android:textSize="20dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:gravity="center_horizontal"
-        android:text="Commandez en click !"
-        android:textSize="25dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:gravity="center_horizontal"
-        android:text="Payez en toute sécurité"
-        android:textSize="25dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:gravity="center_horizontal"
-        android:text="Recevez un récapitulatif de votre consultation"
-        android:textSize="25dp" />
 
 
     <ImageView
         android:layout_width="80dp"
         android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="0dp"
         android:src="@drawable/ic_trending_flat_black_24dp" />
 
 
