@@ -22,7 +22,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyA_k23EtpO0iH9T2OoMTD4TmCW3LcuJMBE" />
 
-        <activity android:name="com.tp1.DocHome.IOM">
+        <activity android:name="com.tp1.DocHome.HomeActivity">
 
 
             <intent-filter>
@@ -35,7 +35,6 @@
         <activity android:name="com.tp1.DocHome.LoginActivity" />
         <activity android:name="com.tp1.DocHome.FirstActivity" />
         <activity android:name="com.tp1.DocHome.TutoActivity" />
-        <activity android:name="com.tp1.DocHome.HomeActivity" />
     </application>
 
 </manifest>
