@@ -15,57 +15,57 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/buttonR"
+        android:layout_alignStart="@+id/buttonR"
+        android:fontFamily="sans-serif-light"
         android:gravity="center"
         android:text="Bienvenue sur "
-        android:fontFamily="sans-serif-light"
         android:textColor="@color/bleu"
         android:textSize="40dp"
-        android:textStyle="bold"
-        android:layout_alignLeft="@+id/buttonR"
-        android:layout_alignStart="@+id/buttonR" />
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="280dp"
         android:layout_height="200dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/dochome"
-        android:layout_marginTop="60dp"
         android:layout_below="@+id/textView6"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/logo" />
 
     <Button
         android:id="@+id/ButtonL"
-        android:fontFamily="sans-serif-light"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/buttonR"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/buttonR"
         android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="35dp"
         android:layout_weight="0.09"
         android:background="@color/bleu"
+        android:fontFamily="sans-serif-light"
         android:onClick="ButtonL"
         android:text="Se connecter"
-        android:textColor="@color/blanc"
         android:textAllCaps="false"
-        android:layout_marginBottom="35dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/buttonR"
-        android:layout_alignStart="@+id/buttonR" />
+        android:textColor="@color/blanc" />
 
 
     <Button
-        android:fontFamily="sans-serif-light"
         android:id="@+id/buttonR"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_weight="0.09"
-        android:background="@color/bleu"
-        android:onClick="ButtonR"
-        android:text="S'inscrire"
-        android:textColor="@color/blanc"
-        android:textAllCaps="false"
         android:layout_below="@+id/imageView1"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="42dp" />
+        android:layout_marginTop="42dp"
+        android:layout_weight="0.09"
+        android:background="@color/bleu"
+        android:fontFamily="sans-serif-light"
+        android:onClick="ButtonR"
+        android:text="S'inscrire"
+        android:textAllCaps="false"
+        android:textColor="@color/blanc" />
 
 
 </RelativeLayout>
