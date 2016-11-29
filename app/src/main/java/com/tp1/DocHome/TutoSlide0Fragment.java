@@ -18,7 +18,7 @@ public class TutoSlide0Fragment extends Fragment {
         buttonskip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), IOM.class));
+                startActivity(new Intent(getContext(), HomeActivity.class));
             }
         });
         return view;
