@@ -18,7 +18,7 @@ public class DocHomeApplication extends Application implements Application.Activ
 
     @Override
     public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
-        if (activity instanceof IOM) {
+        if (activity instanceof HomeActivity) {
             SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
             boolean isconnected = pref.getBoolean("connected", false);
             if (isconnected == false) {
