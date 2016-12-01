@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -10,33 +9,52 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <EditText
-            android:id="@+id/etusername"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="10pt"
-            android:hint="Pseudo" />
     </android.support.design.widget.TextInputLayout>
+
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <EditText
-            android:id="@+id/etpassword"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="10pt"
-            android:hint="Mot de Passe"
-            android:inputType="textPassword" />
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif"
+            android:text="Connectez-vous !"
+            android:textAlignment="center"
+            android:textColor="@color/bleu"
+            android:textSize="30dp" />
+
+
     </android.support.design.widget.TextInputLayout>
 
+    <EditText
+        android:id="@+id/etpassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10pt"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif"
+        android:hint="Mot de Passe"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/etusername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10pt"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif"
+        android:hint="Adresse mail" />
 
     <Button
         android:id="@+id/blogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
+        android:layout_marginTop="20dp"
+        android:background="@color/bleu"
         android:onClick="OnClickLog"
         android:text="Login"
         android:textColor="@color/blanc" />
