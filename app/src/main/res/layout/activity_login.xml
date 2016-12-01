@@ -21,8 +21,8 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:fontFamily="sans-serif"
-            android:text="Connectez-vous !"
+            android:fontFamily="sans-serif-light"
+            android:text="Connectez-vous "
             android:textAlignment="center"
             android:textColor="@color/bleu"
             android:textSize="30dp" />
@@ -31,23 +31,23 @@
     </android.support.design.widget.TextInputLayout>
 
     <EditText
-        android:id="@+id/etpassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10pt"
-        android:layout_marginTop="30dp"
-        android:fontFamily="sans-serif"
-        android:hint="Mot de Passe"
-        android:inputType="textPassword" />
-
-    <EditText
         android:id="@+id/etusername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10pt"
+        android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif-light"
+        android:hint="Adresse Mail" />
+
+    <EditText
+        android:id="@+id/etpassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10pt"
         android:layout_marginTop="20dp"
-        android:fontFamily="sans-serif"
-        android:hint="Adresse mail" />
+        android:fontFamily="sans-serif-light"
+        android:hint="Mot de Passe"
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/blogin"
@@ -55,9 +55,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="@color/bleu"
+        android:fontFamily="sans-serif-light"
         android:onClick="OnClickLog"
-        android:text="Login"
-        android:textColor="@color/blanc" />
+        android:text="Ok"
+        android:textAllCaps="false"
+        android:textColor="@color/blanc"
+        android:textSize="20dp" />
 
 
 </LinearLayout>
