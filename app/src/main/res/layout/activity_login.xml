@@ -25,7 +25,7 @@
             android:text="Connectez-vous "
             android:textAlignment="center"
             android:textColor="@color/bleu"
-            android:textSize="30dp" />
+            android:textSize="31dp" />
 
 
     </android.support.design.widget.TextInputLayout>
