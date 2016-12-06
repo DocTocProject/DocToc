@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_accueil"
+            android:icon="@drawable/ic_accueil"
+            android:title="Accueil" />
+        <item
+            android:id="@+id/nav_profil"
+            android:icon="@drawable/ic_profil"
+            android:title="Profil" />
+        <item
+            android:id="@+id/nav_carnet"
+            android:icon="@drawable/ic_carnet"
+            android:title="Carnet de santé" />
+        <item
+            android:id="@+id/nav_paiement"
+            android:icon="@drawable/ic_euro"
+            android:title="Paiement" />
+        <item
+            android:id="@+id/nav_deconnection"
+            android:icon="@drawable/ic_deconnexion"
+            android:title="Deconnexion" />
+    </group>
+
+
+</menu>
