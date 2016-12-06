@@ -32,7 +32,7 @@ public class HomeActivity extends AppCompatActivity {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new MapFragment(), "Map");
         adapter.addFragment(new HistoriqueFragment(), "Historique");
-        adapter.addFragment(new ProfilFragment(), "Votre profil");
+        adapter.addFragment(new CarnetFragment(), "Votre profil");
         viewPager.setAdapter(adapter);
     }
 

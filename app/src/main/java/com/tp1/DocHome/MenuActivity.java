@@ -58,7 +58,7 @@ public class MenuActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.menuRight) {
             return true;
         }
 
@@ -79,17 +79,32 @@ public class MenuActivity extends AppCompatActivity
             Toast.makeText(this, "Accueil", Toast.LENGTH_SHORT).show();
 
         } else if (id == R.id.nav_profil) {
-            MapFragment mapFragment = new MapFragment();
+            ProfilFragment profilFragment = new ProfilFragment();
             FragmentManager manager = getSupportFragmentManager();
-            manager.beginTransaction().replace(R.id.relativelayout_for_fragment, mapFragment, mapFragment.getTag()).commit();
+            manager.beginTransaction().replace(R.id.relativelayout_for_fragment, profilFragment, profilFragment.getTag()).commit();
 
-            Toast.makeText(this, "Accueil", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Profil", Toast.LENGTH_SHORT).show();
 
         } else if (id == R.id.nav_carnet) {
+            CarnetFragment carnetFragment = new CarnetFragment();
+            FragmentManager manager = getSupportFragmentManager();
+            manager.beginTransaction().replace(R.id.relativelayout_for_fragment, carnetFragment, carnetFragment.getTag()).commit();
+
+            Toast.makeText(this, "Carnet de santé", Toast.LENGTH_SHORT).show();
 
         } else if (id == R.id.nav_paiement) {
+            PaiementFragment paiementFragment = new PaiementFragment();
+            FragmentManager manager = getSupportFragmentManager();
+            manager.beginTransaction().replace(R.id.relativelayout_for_fragment, paiementFragment, paiementFragment.getTag()).commit();
+
+            Toast.makeText(this, "Paiement", Toast.LENGTH_SHORT).show();
 
         } else if (id == R.id.nav_deconnection) {
+            DeconnexionFragment deconnexionFragment = new DeconnexionFragment();
+            FragmentManager manager = getSupportFragmentManager();
+            manager.beginTransaction().replace(R.id.relativelayout_for_fragment, deconnexionFragment, deconnexionFragment.getTag()).commit();
+
+            Toast.makeText(this, "Deconnexion", Toast.LENGTH_SHORT).show();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
