@@ -59,7 +59,9 @@ public class MenuActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.menuRight) {
-            return true;
+            TutoSlide0Fragment tutoSlide0Fragment = new TutoSlide0Fragment();
+            FragmentManager manager = getSupportFragmentManager();
+            manager.beginTransaction().replace(R.id.relativelayout_for_fragment, tutoSlide0Fragment, tutoSlide0Fragment.getTag()).commit();
         }
 
         return super.onOptionsItemSelected(item);
