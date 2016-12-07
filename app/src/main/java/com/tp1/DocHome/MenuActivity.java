@@ -1,5 +1,6 @@
 package com.tp1.DocHome;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
@@ -59,9 +60,10 @@ public class MenuActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.menuRight) {
-            TutoSlide0Fragment tutoSlide0Fragment = new TutoSlide0Fragment();
-            FragmentManager manager = getSupportFragmentManager();
-            manager.beginTransaction().replace(R.id.relativelayout_for_fragment, tutoSlide0Fragment, tutoSlide0Fragment.getTag()).commit();
+           // TutoSlide0Fragment tutoSlide0Fragment = new TutoSlide0Fragment();
+           // FragmentManager manager = getSupportFragmentManager();
+           // manager.beginTransaction().replace(R.id.relativelayout_for_fragment, tutoSlide0Fragment, tutoSlide0Fragment.getTag()).commit();
+            startActivity(new Intent(this, TutoActivity.class));
         }
 
         return super.onOptionsItemSelected(item);
