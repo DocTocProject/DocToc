@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#0950A3</color>
-    <color name="colorPrimaryDark">#000000</color>
-    <color name="bleufonce">#12355A</color>
-    <color name="colorAccent">#9575CD</color>
-    <color name="blanc">#FFFFFF</color>
+    <color name="colorPrimary">#009688</color>
+    <color name="colorPrimaryDark">#009688</color>
+    <color name="bleufonce">#009688</color>
+    <color name="colorAccent">#009688</color>
+    <color name="blanc">#009688</color>
     <color name="bleu">#009688</color>
-    <color name="noir">#000000</color>
+    <color name="noir">#009688</color>
 
 </resources>

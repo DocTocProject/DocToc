@@ -82,6 +82,16 @@ public class MenuActivity extends AppCompatActivity
 
             Toast.makeText(this, "Accueil", Toast.LENGTH_SHORT).show();
 
+
+        } else if (id == R.id.nav_historique) {
+            HistoriqueFragment historiqueFragment = new HistoriqueFragment();
+            FragmentManager manager = getSupportFragmentManager();
+            manager.beginTransaction().replace(R.id.relativelayout_for_fragment, historiqueFragment, historiqueFragment.getTag()).commit();
+
+            Toast.makeText(this, "Historique", Toast.LENGTH_SHORT).show();
+
+
+
         } else if (id == R.id.nav_profil) {
             ProfilFragment profilFragment = new ProfilFragment();
             FragmentManager manager = getSupportFragmentManager();

@@ -6,6 +6,12 @@
             android:id="@+id/nav_accueil"
             android:icon="@drawable/ic_accueil"
             android:title="Accueil" />
+
+        <item
+            android:id="@+id/nav_historique"
+            android:icon="@drawable/historique"
+            android:title="Historique" />
+
         <item
             android:id="@+id/nav_profil"
             android:icon="@drawable/ic_profil"
