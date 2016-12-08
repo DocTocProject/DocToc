@@ -19,6 +19,20 @@
             android:textColor="@color/bleu"
             android:textSize="15pt"></TextView>
 
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"
+            android:layout_gravity="center_horizontal" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -48,20 +62,25 @@
                 android:hint="Date d'expiration(MM/AA)"
                 android:imeOptions="actionNext"
                 android:inputType="date"
+<<<<<<< Updated upstream
                 android:maxLength="14"
                 android:singleLine="true" />
+=======
+                android:singleLine="true"
+                android:maxLength="5"/>
+>>>>>>> Stashed changes
         </android.support.design.widget.TextInputLayout>
 
 
 
 
         <Button
-            android:id="@+id/bregister"
+            android:id="@+id/ajouter"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="@color/bleu"
             android:onClick="OnClickRegister"
-            android:text="S'inscire"
+            android:text="Ajouter"
             android:textColor="@color/blanc" />
 
     </LinearLayout>
