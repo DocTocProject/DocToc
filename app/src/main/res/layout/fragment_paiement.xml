@@ -16,7 +16,7 @@
             android:layout_marginBottom="15dp"
             android:layout_marginTop="15dp"
             android:text="Ajouter ma carte"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/bleu"
             android:textSize="15pt"></TextView>
 
         <android.support.design.widget.TextInputLayout
@@ -32,8 +32,8 @@
                 android:hint="Numero de carte"
                 android:imeOptions="actionNext"
                 android:inputType="date"
-                android:singleLine="true"
-                android:maxLength="14"/>
+                android:maxLength="14"
+                android:singleLine="true" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -48,8 +48,8 @@
                 android:hint="Date d'expiration(MM/AA)"
                 android:imeOptions="actionNext"
                 android:inputType="date"
-                android:singleLine="true"
-                android:maxLength="14"/>
+                android:maxLength="14"
+                android:singleLine="true" />
         </android.support.design.widget.TextInputLayout>
 
 
@@ -59,7 +59,7 @@
             android:id="@+id/bregister"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="@color/colorPrimary"
+            android:background="@color/bleu"
             android:onClick="OnClickRegister"
             android:text="S'inscire"
             android:textColor="@color/blanc" />

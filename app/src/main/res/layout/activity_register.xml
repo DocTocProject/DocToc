@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="1">
 
         <TextView
             android:id="@+id/TextViewTitle"
@@ -15,38 +17,114 @@
             android:layout_gravity="center"
             android:layout_marginBottom="15dp"
             android:layout_marginTop="15dp"
-            android:text="Enregistrez-vous"
-            android:textColor="@color/colorPrimary"
-            android:textSize="15pt"></TextView>
+            android:fontFamily="sans-serif-light"
+            android:text="Inscription"
+            android:textColor="@color/bleu"
+            android:textSize="15pt" />
+
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-
-            <EditText
-                android:id="@+id/idage"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="10pt"
-                android:hint="Date de naissance (JJ/MM/AAAA)"
-                android:imeOptions="actionNext"
-                android:inputType="date"
-                android:singleLine="true" />
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <EditText
                 android:id="@+id/idnom"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="10pt"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
                 android:hint="Nom"
+                android:imeOptions="actionNext" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="49dp">
+            <EditText
+                android:id="@+id/idprenom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:hint="Prénom"
                 android:imeOptions="actionNext"
                 android:singleLine="true" />
+
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Date de naissance " />
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.04"
+            android:onClick="onClick"
+            android:text="SELECT BIRTH DATE" />
+
+        <RadioGroup
+            android:id="@+id/gruporb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <EditText
+                android:id="@+id/idsexe"
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10pt"
+                android:layout_weight="0.04"
+                android:fontFamily="sans-serif-light"
+                android:hint="Sexe"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        </RadioGroup>
+
+        <RadioButton
+            android:id="@+id/idhomme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:clickable="false"
+            android:gravity="bottom|right"
+            android:text="H" />
+
+        <RadioButton
+            android:id="@+id/idfemme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="bottom|left"
+            android:text="F" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/idtelephone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ems="10"
+                android:fontFamily="sans-serif-light"
+                android:hint="Téléphone"
+                android:inputType="phone" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -54,13 +132,14 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/idpseudo"
+                android:id="@+id/idemail"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="10pt"
-                android:hint="Pseudo"
-                android:imeOptions="actionNext"
-                android:singleLine="true" />
+                android:layout_weight="0.52"
+                android:ems="10"
+                android:fontFamily="sans-serif-light"
+                android:hint="e-mail"
+                android:inputType="textEmailAddress" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -72,20 +151,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="10pt"
+                android:fontFamily="sans-serif-light"
                 android:hint="Mot de Passe"
                 android:imeOptions="actionNext"
                 android:inputType="textPassword"
                 android:singleLine="true" />
+
+
         </android.support.design.widget.TextInputLayout>
+
 
         <Button
             android:id="@+id/bregister"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="@color/colorPrimary"
+            android:background="@color/bleu"
             android:onClick="OnClickRegister"
-            android:text="S'inscire"
+            android:text="Ok"
             android:textColor="@color/blanc" />
+
 
     </LinearLayout>
 
