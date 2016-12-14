@@ -24,11 +24,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <Spinner
-                android:id="@+id/spinner"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal" />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"
+            android:layout_gravity="center_horizontal" />
 
         </android.support.design.widget.TextInputLayout>
 
@@ -62,9 +62,13 @@
                 android:hint="Date d'expiration(MM/AA)"
                 android:imeOptions="actionNext"
                 android:inputType="date"
+<<<<<<< Updated upstream
                 android:maxLength="14"
                 android:singleLine="true" />
-
+=======
+                android:singleLine="true"
+                android:maxLength="5"/>
+>>>>>>> Stashed changes
         </android.support.design.widget.TextInputLayout>
 
 
