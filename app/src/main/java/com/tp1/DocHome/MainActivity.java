@@ -1,7 +1,25 @@
 package com.tp1.DocHome;
 
 
-import android.Manifest;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.Toast;
+
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.CameraPosition;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
+import java.io.IOException;
+import java.util.List;
+import android.location.Address;
+import android.location.Geocoder;
+
+/**import android.Manifest;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Build;
@@ -13,6 +31,7 @@ import android.support.v4.app.Fragment;
 
 
 import android.support.v4.app.FragmentManager;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,13 +51,59 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.MarkerOptions;*/
 
 
-public class MapFragment extends Fragment implements OnMapReadyCallback, ConnectionCallbacks, LocationListener {
+public class MainActivity extends AppCompatActivity implements OnMapReadyCallback {
+    private GoogleMap mapa;
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        /**super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        MapFragment mapFragment = (MapFragment) getFragmentManager().findFragmentById(R.id.map);
+
+        mapFragment.getMapAsync(this);*/
+    }
+    @Override
+    public void onMapReady(GoogleMap map) {
+        mapa = map;
+// 28 Rue Notre Dame des Champs - 75006 Paris
+        double lattd;
+        double longtd;
+        List<Address> geocodeMatches=null;
+        try {
+            geocodeMatches =
+                    new Geocoder (this) .getFromLocationName (
+                            "41 rue des Pinsons, 94000 CrÃ©teil France", 1);
+        } catch (IOException e) {
+            // TODO gÃ©nÃ©rÃ© automatiquement bloc catch
+            e.printStackTrace ();
+        }
+        if (! geocodeMatches.isEmpty ()) {
+            lattd = geocodeMatches.get(0).getLatitude();
+            longtd = geocodeMatches.get(0).getLongitude();
+            System.out.println ("lattd " + lattd + "   longtd" + longtd);
 
 
-    private static final int ACCESS_FINE_LOCATION_PERMISSIONS_REQUEST = 1;
+            LatLng cali = new LatLng(lattd, longtd);
+            map.addMarker(new MarkerOptions()
+                    .position(cali)
+                    .title("Pays: France"))
+            ;
+
+            CameraPosition cameraPosition = CameraPosition.builder()
+                    .target(cali)
+                    .zoom(10)
+                    .build();
+
+            map.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+        }
+
+    }
+
+
+    /** private static final int ACCESS_FINE_LOCATION_PERMISSIONS_REQUEST = 1;
     private GoogleMap mMap;
     private GoogleApiClient mGoogleApiClient;
     private SupportMapFragment mapFragment;
@@ -47,7 +112,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, Connect
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.map_fragment, container, false);
+        View v = inflater.inflate(R.layout.activity_main, container, false);
         mapFragment = SupportMapFragment.newInstance();
         FragmentManager fm = getChildFragmentManager();
         fm.beginTransaction().replace(R.id.map_container, mapFragment).commit();
@@ -232,5 +297,5 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, Connect
             LatLng myPosition = new LatLng(location.getLatitude(), location.getLongitude());
             mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(myPosition, 13));
         }
-    }
+    }*/
 }

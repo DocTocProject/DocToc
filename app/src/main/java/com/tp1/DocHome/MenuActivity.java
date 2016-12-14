@@ -76,7 +76,7 @@ public class MenuActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_accueil) {
-            MapFragment mapFragment = new MapFragment();
+            GMapsFragment mapFragment = new GMapsFragment();
             FragmentManager manager = getSupportFragmentManager();
             manager.beginTransaction().replace(R.id.relativelayout_for_fragment, mapFragment, mapFragment.getTag()).commit();
 
