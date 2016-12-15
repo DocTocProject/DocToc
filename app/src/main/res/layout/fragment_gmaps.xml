@@ -10,6 +10,16 @@
         android:layout_height="match_parent"
         class="com.google.android.gms.maps.SupportMapFragment" />
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:inputType="textPostalAddress"
+        android:ems="10"
+        android:hint="Address"
+        android:background="@color/common_google_signin_btn_text_dark_default"
+        android:id="@+id/Address" />
+
+
     <Button
         android:id="@+id/bcommandez"
         android:layout_width="match_parent"
