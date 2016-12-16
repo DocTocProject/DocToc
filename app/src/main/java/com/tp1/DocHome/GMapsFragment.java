@@ -38,10 +38,12 @@ public class GMapsFragment extends Fragment implements OnMapReadyCallback {
     SupportMapFragment mMapView;
     private GoogleMap googleMap;
 
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // inflat and return the layout
+        // inflat and return the layout hkjdkfsajdasdf
         View v = inflater.inflate(R.layout.fragment_gmaps, container,
                 false);
         mMapView = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
