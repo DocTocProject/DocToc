@@ -66,20 +66,9 @@
 
         </android.support.design.widget.TextInputLayout>
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.04"
-            android:onClick="onClick"
-            android:text="SELECT BIRTH DATE" />
 
-        <RadioGroup
-            android:id="@+id/gruporb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="1">
+
+
 
             <EditText
                 android:id="@+id/idsexe"
@@ -93,24 +82,9 @@
                 android:singleLine="true"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
-        </RadioGroup>
 
-        <RadioButton
-            android:id="@+id/idhomme"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:clickable="false"
-            android:gravity="bottom|right"
-            android:text="H" />
 
-        <RadioButton
-            android:id="@+id/idfemme"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:gravity="bottom|left"
-            android:text="F" />
+
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
