@@ -33,7 +33,7 @@
             android:required="true"/>
 
         <activity
-            android:name=".MenuActivity"
+            android:name=".FirstActivity"
             android:label="DocToc"
             android:theme="@style/MyMaterialTheme">>
             <intent-filter>
@@ -44,7 +44,7 @@
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".TutoActivity" />
-        <activity android:name=".FirstActivity"/>
+        <activity android:name=".MenuActivity"/>
 
     </application>
 

@@ -1,113 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-
-
-    <Spinner
-        android:id="@+id/spin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="80sp" />
-
-
-    <RelativeLayout
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:padding="10dp"
         android:layout_width="match_parent"
-        android:layout_height="70sp">
+        >
 
-        <TextView
-            android:id="@+id/information"
+        <Button
+            android:text="Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:gravity="center"
-            android:text="Vous n'avez rien selectionné"
-            android:textColor="@color/bleu"
-            android:textSize="18sp" />
-    </RelativeLayout>
+            android:id="@+id/button"
+            android:layout_marginBottom="10dp"/>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="70sp">
-
-        <TextView
-            android:id="@+id/temperature"
+        <Button
+            android:text="Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:gravity="center"
-            android:text="température"
-            android:textColor="@color/bleu"
-            android:textSize="18sp" />
-    </RelativeLayout>
+            android:id="@+id/button2"
+            android:layout_marginBottom="10dp"/>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="70sp">
-
-        <TextView
-            android:id="@+id/tension"
+        <Button
+            android:text="Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:gravity="center"
-            android:text="Tension"
-            android:textColor="@color/bleu"
-            android:textSize="18sp" />
-    </RelativeLayout>
+            android:id="@+id/button3"
+            android:layout_marginBottom="10dp"/>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="70sp">
-
-        <TextView
-            android:id="@+id/symptome"
+        <Button
+            android:text="Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:gravity="center"
-            android:text="Symptome"
-            android:textColor="@color/bleu"
-            android:textSize="18sp" />
-    </RelativeLayout>
+            android:id="@+id/button4"
+            android:layout_marginBottom="10dp"/>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="70sp">
-
-        <TextView
-            android:id="@+id/diagnostic"
+        <Button
+            android:text="Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:gravity="center"
-            android:text="diagnostic"
-            android:textColor="@color/bleu"
-            android:textSize="18sp" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="70sp">
-
-        <TextView
-            android:id="@+id/traitement"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:gravity="center"
-            android:text=" traitement"
-            android:textColor="@color/bleu"
-            android:textSize="18sp" />
-    </RelativeLayout>
+            android:id="@+id/button5" />
 
 
 </LinearLayout>

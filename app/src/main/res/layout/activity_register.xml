@@ -1,50 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:weightSum="1">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/TextViewTitle"
+            android:layout_width="wrap_content"
+            android:text="Prénom "
+            android:layout_height="wrap_content"
+            />
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Nom"
+            android:layout_height="wrap_content"
+            />
+
+        <EditText
+            android:id="@+id/etNom"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Date de naissance"
+            android:layout_height="wrap_content"
+            />
+
+        <EditText
+            android:id="@+id/etBirthDate"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="15dp"
-            android:layout_marginTop="15dp"
-            android:fontFamily="sans-serif-light"
-            android:text="Inscription"
-            android:textColor="@color/bleu"
-            android:textSize="15pt" />
+            android:text="Sexe"
+            android:id="@+id/textview"
+            android:layout_alignRight="@+id/radiogroup"
+            android:layout_alignEnd="@+id/radiogroup"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/radiogroup"
+            android:layout_alignStart="@+id/radiogroup"
+            />
 
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radiogroup"
+            >
 
-            <EditText
-                android:id="@+id/idnom"
-                android:layout_width="match_parent"
+            <RadioButton
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
-                android:hint="Nom"
-                android:imeOptions="actionNext" />
+                android:id="@+id/radiobutton"
+                android:checked="false"
+                android:text="Homme"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radiobutton2"
+                android:checked="false"
+                android:text="Femme"
+                />
+        </RadioGroup>
 
 
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Numéro de téléphone"
+            android:layout_height="wrap_content"
+            />
+
+        <EditText
+            android:id="@+id/etphone"
+            android:layout_width="match_parent"
+            android:inputType="number"
+            android:layout_marginBottom="10dp"
+            android:maxLength="10"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Adresse email"
+            android:layout_height="wrap_content"
+            />
+
+        <EditText
+            android:id="@+id/etmailid"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Identifiant"
+            android:layout_height="wrap_content"
+            />
+
+        <EditText
+            android:id="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Mot de passe"
+            android:layout_height="wrap_content"
+            />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
+            android:inputType="textPassword"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Confirmer le Mot de passe"
+            android:layout_height="wrap_content"
+            />
+
+        <EditText
+            android:id="@+id/etPasswordcheck"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
+            android:inputType="textPassword"
+            android:layout_height="wrap_content" />
 
 
         <Button
-            android:id="@+id/bregister"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="@color/bleu"
-            android:onClick="OnClickRegister"
+            android:id="@+id/bRegister"
             android:text="Ok"
-            android:textColor="@color/blanc" />
-
-
+            android:onClick="OnClickLreg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
 </ScrollView>
