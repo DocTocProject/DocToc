@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.3"
 
     defaultConfig {
-        applicationId "com.tp1.tabbar"
+        applicationId "com.tp1.DocHome"
         minSdkVersion 16
         targetSdkVersion 23
         versionCode 1

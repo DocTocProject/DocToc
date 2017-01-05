@@ -18,10 +18,9 @@
         android:label="DocToc"
         android:supportsRtl="true"
         android:theme="@style/MyMaterialTheme">
-        android:name="android.support.multidex.MultiDexApplication">
         <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBM8_X_LOipXt1TojJkDNwfB3if3HptxiY" />
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyA92M7FgWL2wfDP8hhVzRaAFx6fgreR3ck" />
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
@@ -39,14 +38,13 @@
             android:theme="@style/MyMaterialTheme">>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".FirstActivity" />
         <activity android:name=".TutoActivity" />
+        <activity android:name=".FirstActivity"/>
 
     </application>
 

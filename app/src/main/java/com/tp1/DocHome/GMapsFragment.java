@@ -100,11 +100,6 @@ public class GMapsFragment extends Fragment implements OnMapReadyCallback {
         super.onPause();
         mMapView.onPause();
     }
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        mMapView.onDestroy();
-    }
 
     @Override
     public void onLowMemory() {
