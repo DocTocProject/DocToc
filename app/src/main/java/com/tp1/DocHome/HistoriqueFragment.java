@@ -16,7 +16,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class HistoriqueFragment extends AppCompatActivity implements View.OnClickListener {
+public class HistoriqueFragment extends Fragment implements View.OnClickListener {
 
         Button button;
         Button button2;
@@ -26,24 +26,25 @@ public class HistoriqueFragment extends AppCompatActivity implements View.OnClic
 
 
         @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.historique_fragment);
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                                 Bundle savedInstanceState) {
+            View rootView =inflater.inflate(R.layout.historique_fragment, container, false);
 
-            button= (Button)findViewById(R.id.button);
+            button= (Button)rootView.findViewById(R.id.button);
             button.setOnClickListener(this);
 
-            button2= (Button)findViewById(R.id.button2);
+            button2= (Button)rootView.findViewById(R.id.button2);
             button2.setOnClickListener(this);
 
-            button3= (Button)findViewById(R.id.button3);
+            button3= (Button)rootView.findViewById(R.id.button3);
             button3.setOnClickListener(this);
 
-            button4= (Button)findViewById(R.id.button4);
+            button4= (Button)rootView.findViewById(R.id.button4);
             button4.setOnClickListener(this);
 
-            button5= (Button)findViewById(R.id.button5);
+            button5= (Button)rootView.findViewById(R.id.button5);
             button5.setOnClickListener(this);
+            return rootView;
 
         }
 
@@ -51,7 +52,7 @@ public class HistoriqueFragment extends AppCompatActivity implements View.OnClic
         public void onClick(View v) {
             switch (v.getId()){
                 case R.id.button:
-                    Intent a=new Intent(this,HistoriqueFragmentdetail.class);
+                    Intent a=new Intent(getContext(),HistoriqueFragmentdetail.class);
                     startActivity(a);
                     //startActivity(new Intent(this,History.class));
                     break;
@@ -59,25 +60,25 @@ public class HistoriqueFragment extends AppCompatActivity implements View.OnClic
 
 
                 case R.id.button2:
-                    Toast x2= Toast.makeText(this,"Data will appear", Toast.LENGTH_SHORT);
+                    Toast x2= Toast.makeText(getContext(),"Data will appear", Toast.LENGTH_SHORT);
                     x2.show();
                     //popup msg
                     break;
 
                 case R.id.button3:
-                    Toast x3= Toast.makeText(this,"Data will appear", Toast.LENGTH_SHORT);
+                    Toast x3= Toast.makeText(getContext(),"Data will appear", Toast.LENGTH_SHORT);
                     x3.show();
                     //popup msg
                     break;
 
                 case R.id.button4:
-                    Toast x4= Toast.makeText(this,"Data will appear", Toast.LENGTH_SHORT);
+                    Toast x4= Toast.makeText(getContext(),"Data will appear", Toast.LENGTH_SHORT);
                     x4.show();
                     //popup msg
                     break;
 
                 case R.id.button5:
-                    Toast x5= Toast.makeText(this,"Data will appear", Toast.LENGTH_SHORT);
+                    Toast x5= Toast.makeText(getContext(),"Data will appear", Toast.LENGTH_SHORT);
                     x5.show();
                     //popup msg
                     break;
