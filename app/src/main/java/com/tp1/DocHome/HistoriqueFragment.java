@@ -2,6 +2,7 @@ package com.tp1.DocHome;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,9 +53,10 @@ public class HistoriqueFragment extends Fragment implements View.OnClickListener
         public void onClick(View v) {
             switch (v.getId()){
                 case R.id.button:
-                    Intent a=new Intent(getContext(),HistoriqueFragmentdetail.class);
-                    startActivity(a);
-                    //startActivity(new Intent(this,History.class));
+
+                    HistoriqueFragmentdetail historiqueFragmentdetail = new HistoriqueFragmentdetail();
+                    FragmentManager manager = getActivity().getSupportFragmentManager();
+                    manager.beginTransaction().replace(R.id.relativelayout_for_fragment, historiqueFragmentdetail, historiqueFragmentdetail.getTag()).commit();
                     break;
 
 
