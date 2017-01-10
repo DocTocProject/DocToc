@@ -11,16 +11,6 @@
         android:orientation="vertical"
         android:weightSum="1">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:fontFamily="sans-serif-light"
-            android:gravity="center_horizontal"
-            android:text="Une consultation et un réglement en toute sécurité ! "
-            android:textColor="@color/bleu"
-            android:textSize="30dp"
-            android:textStyle="bold" />
 
         <TextView
             android:layout_width="350dp"
@@ -35,7 +25,7 @@
             android:layout_height="50dp"
             android:layout_marginTop="30dp"
             android:gravity="center_horizontal"
-            android:text=" Il prend en compte de votre carte vitale et mutuelle  "
+            android:text="Il prend en compte vos cartes vitale et de mutuelle"
             android:textSize="20dp" />
 
         <TextView
@@ -43,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:gravity="center_horizontal"
-            android:text="Réglez le reste  en toute sécurité via notre payement en ligne"
+            android:text="Réglez en toute sécurité via notre paiement en ligne"
             android:textSize="20dp" />
 
         <TextView

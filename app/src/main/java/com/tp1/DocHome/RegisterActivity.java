@@ -81,18 +81,18 @@ public class RegisterActivity extends AppCompatActivity {
 
 
 
-            if (prenom.equals("") || nom.equals("")  || motdepasse.equals("") || telephone.equals("") || email.equals("") || confirmationmotdepasse.equals("")) {
-                Toast.makeText(this, "Vous avez oublié de remplir des champs", Toast.LENGTH_SHORT).show();
-            }
+            //if (prenom.equals("") || nom.equals("")  || motdepasse.equals("") || telephone.equals("") || email.equals("") || confirmationmotdepasse.equals("")) {
+               // Toast.makeText(this, "Vous avez oublié de remplir des champs", Toast.LENGTH_SHORT).show();
+           // }
 
             /*if (etpasswordcheck.equals(etPasswordstr)){
                 Toast.makeText(this,"Le mot de passe n'est pas comfirmé", Toast.LENGTH_SHORT);
             }*/
 
-            else {
+            //else {
 
         startActivity(new Intent(this, TutoActivity.class));
-    }
+    //}
 }}
 
 

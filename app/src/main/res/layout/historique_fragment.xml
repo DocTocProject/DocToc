@@ -8,35 +8,45 @@
         >
 
         <Button
-            android:text="Button"
+            android:text="Consultation du docteur"
+            android:textColor="@color/bleu"
+            android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/button"
             android:layout_marginBottom="10dp"/>
 
         <Button
-            android:text="Button"
+            android:text="Consultation du docteur"
+            android:textColor="@color/bleu"
+            android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/button2"
             android:layout_marginBottom="10dp"/>
 
         <Button
-            android:text="Button"
+            android:text="Consultation du docteur"
+            android:textColor="@color/bleu"
+            android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/button3"
             android:layout_marginBottom="10dp"/>
 
         <Button
-            android:text="Button"
+            android:text="Consultation du docteur"
+            android:textColor="@color/bleu"
+            android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/button4"
             android:layout_marginBottom="10dp"/>
 
         <Button
-            android:text="Button"
+            android:text="Consultation du docteur "
+            android:textColor="@color/bleu"
+            android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/button5" />

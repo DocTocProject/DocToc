@@ -28,6 +28,7 @@
         android:layout_alignParentBottom="true"
         android:background="@color/bleu"
         android:text="Commandez ici "
+
         android:textColor="@color/blanc" />
 
 </RelativeLayout>

@@ -7,4 +7,19 @@
         android:title="tuto"
         android:icon="@drawable/help"
         app:showAsAction="always" />
+
+
+    <TextView
+        android:layout_width="308dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center_horizontal"
+        android:text=" Recevez la visite d'un médecin où que vous soyez !"
+        android:textColor="@color/bleu"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+
+
 </menu>

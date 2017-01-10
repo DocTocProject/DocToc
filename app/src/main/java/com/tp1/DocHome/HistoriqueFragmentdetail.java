@@ -6,9 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-/**
- * Created by martinezeva on 05/01/2017.
- */
+
 
 public class HistoriqueFragmentdetail extends Fragment{
 

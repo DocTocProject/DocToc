@@ -1,6 +1,7 @@
 package com.tp1.DocHome;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.location.Address;
 import android.location.Geocoder;
@@ -13,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -37,13 +39,40 @@ import java.util.List;
 public class GMapsFragment extends Fragment implements OnMapReadyCallback {
     SupportMapFragment mMapView;
     private GoogleMap googleMap;
+    private Button commander;
+    private EditText edit;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // inflat and return the layout
+
         View v = inflater.inflate(R.layout.fragment_gmaps, container,
                 false);
+        commander= (Button) v.findViewById(R.id.bcommandez);
+        edit=(EditText)  v.findViewById(R.id.Address);
+        commander.setOnClickListener( new View.OnClickListener()
+
+        {
+
+            /**
+             * Called when a view has been clicked.
+             *
+             * @param v The view that was clicked.
+             */
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), RegisterActivity.class);
+                startActivity(intent);
+
+
+
+
+            }
+
+
+        });
+
         mMapView = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
         mMapView.onCreate(savedInstanceState);
 
@@ -69,6 +98,8 @@ public class GMapsFragment extends Fragment implements OnMapReadyCallback {
         return v;
     }
 
+
+
     private void initMap() {
         // latitude and longitude
         double latitude = 48.866667;
@@ -89,6 +120,8 @@ public class GMapsFragment extends Fragment implements OnMapReadyCallback {
         googleMap.animateCamera(CameraUpdateFactory
                 .newCameraPosition(cameraPosition));
     }
+
+
 
     @Override
     public void onResume() {
@@ -111,39 +144,5 @@ public class GMapsFragment extends Fragment implements OnMapReadyCallback {
     public void onMapReady(GoogleMap googleMap) {
 
     }
-    /**s   @Override
-    public void onMapReady(GoogleMap map) {
 
-// 28 Rue Notre Dame des Champs - 75006 Paris
-        double lattd;
-        double longtd;
-        List<Address> geocodeMatches = null;
-        try {
-            geocodeMatches =
-                    new Geocoder(this).getFromLocationName(
-                            "41 rue des Pinsons, 94000 CrÃ©teil France", 1);
-        } catch (IOException e) {
-            // TODO gÃ©nÃ©rÃ© automatiquement bloc catch
-            e.printStackTrace();
-        }
-        if (!geocodeMatches.isEmpty()) {
-            lattd = geocodeMatches.get(0).getLatitude();
-            longtd = geocodeMatches.get(0).getLongitude();
-            System.out.println("lattd " + lattd + "   longtd" + longtd);
-
-
-            LatLng cali = new LatLng(lattd, longtd);
-            map.addMarker(new MarkerOptions()
-                    .position(cali)
-                    .title("Pays: France"))
-            ;
-
-            CameraPosition cameraPosition = CameraPosition.builder()
-                    .target(cali)
-                    .zoom(10)
-                    .build();
-
-            map.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
-        }
-    }*/
 }

@@ -13,4 +13,9 @@
     tools:context="com.tp1.DocHome.MenuActivity"
     tools:showIn="@layout/app_bar_menu">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!" />
+
 </RelativeLayout>
