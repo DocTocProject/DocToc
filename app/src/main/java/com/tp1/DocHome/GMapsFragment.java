@@ -40,7 +40,6 @@ import java.util.List;
 public class GMapsFragment extends Fragment implements OnMapReadyCallback {
     SupportMapFragment mMapView;
     private GoogleMap googleMap;
-    private Button commander;
     private EditText edit;
 
     @Override
@@ -50,9 +49,9 @@ public class GMapsFragment extends Fragment implements OnMapReadyCallback {
 
         View v = inflater.inflate(R.layout.fragment_gmaps, container,
                 false);
-        commander= (Button) v.findViewById(R.id.commander);
+        Button commander = (Button) v.findViewById(R.id.commander);
         edit=(EditText)  v.findViewById(R.id.Address);
-        commander.setOnClickListener( new View.OnClickListener()
+        commander.setOnClickListener(new View.OnClickListener()
 
         {
 
@@ -150,5 +149,6 @@ public class GMapsFragment extends Fragment implements OnMapReadyCallback {
     public void onMapReady(GoogleMap googleMap) {
 
     }
+
 
 }
