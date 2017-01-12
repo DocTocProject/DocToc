@@ -86,7 +86,7 @@ public class RegisterActivity extends AppCompatActivity {
            // }
 
             /*if (etpasswordcheck.equals(etPasswordstr)){
-                Toast.makeText(this,"Le mot de passe n'est pas comfirmé", Toast.LENGTH_SHORT);
+                Toast.makeText(this,"Le mot de passe n'est pas confirmé", Toast.LENGTH_SHORT);
             }*/
 
             //else {
