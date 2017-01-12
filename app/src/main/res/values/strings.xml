@@ -16,5 +16,10 @@
         <item>VISA</item>
         <item>MASTER CARD</item>
     </string-array>
+    <string-array name="type1">
+        <item>Allergie</item>
+        <item>Maladie</item>
+        <item>Operation</item>
+    </string-array>
 
 </resources>
