@@ -2,6 +2,8 @@ package com.tp1.DocHome;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -79,20 +81,23 @@ public class RegisterActivity extends AppCompatActivity {
             String email =idemail.getText().toString();
 
 
+            if (prenom.equals("") || nom.equals("")  || motdepasse.equals("") || telephone.equals("") || email.equals("") || motdepasse.equals("") || confirmationmotdepasse.equals("")) {
+                Toast.makeText(this, "Vous avez oublié de remplir des champs", Toast.LENGTH_SHORT).show();
+
+            }
+
+            else if (!motdepasse.equals(confirmationmotdepasse)){
+                Toast.makeText(this, "Vos mot de passe sont différents", Toast.LENGTH_SHORT).show();
+        }
+            else {
+                    SharedPreferences sharedpreferences = PreferenceManager.getDefaultSharedPreferences(this);
+                    SharedPreferences.Editor editor = sharedpreferences.edit();
+                    editor.putBoolean("connected", true);
+                    startActivity(new Intent(this, TutoActivity.class));
+                }
 
 
-            //if (prenom.equals("") || nom.equals("")  || motdepasse.equals("") || telephone.equals("") || email.equals("") || confirmationmotdepasse.equals("")) {
-               // Toast.makeText(this, "Vous avez oublié de remplir des champs", Toast.LENGTH_SHORT).show();
-           // }
 
-            /*if (etpasswordcheck.equals(etPasswordstr)){
-                Toast.makeText(this,"Le mot de passe n'est pas comfirmé", Toast.LENGTH_SHORT);
-            }*/
-
-            //else {
-
-        startActivity(new Intent(this, TutoActivity.class));
-    //}
 }}
 
 

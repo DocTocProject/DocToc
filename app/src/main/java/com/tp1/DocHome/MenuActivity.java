@@ -11,7 +11,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
+
+import static java.security.AccessController.getContext;
 
 public class MenuActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -123,12 +127,9 @@ public class MenuActivity extends AppCompatActivity
             Toast.makeText(this, "Paiement", Toast.LENGTH_SHORT).show();
 
         } else if (id == R.id.nav_deconnection) {
-            DeconnexionFragment deconnexionFragment = new DeconnexionFragment();
-            FragmentManager manager = getSupportFragmentManager();
-            manager.beginTransaction().replace(R.id.relativelayout_for_fragment, deconnexionFragment, deconnexionFragment.getTag()).commit();
-
-            Toast.makeText(this, "Deconnexion", Toast.LENGTH_SHORT).show();
-        }
+            startActivity(new Intent(this, FirstActivity.class));
+                Toast.makeText(this, " Vous êtes déconnecté !", Toast.LENGTH_SHORT).show();
+            }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
