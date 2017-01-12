@@ -9,6 +9,7 @@ import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -49,7 +50,7 @@ public class GMapsFragment extends Fragment implements OnMapReadyCallback {
 
         View v = inflater.inflate(R.layout.fragment_gmaps, container,
                 false);
-        commander= (Button) v.findViewById(R.id.bcommandez);
+        commander= (Button) v.findViewById(R.id.commander);
         edit=(EditText)  v.findViewById(R.id.Address);
         commander.setOnClickListener( new View.OnClickListener()
 
@@ -62,8 +63,13 @@ public class GMapsFragment extends Fragment implements OnMapReadyCallback {
              */
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), RegisterActivity.class);
-                startActivity(intent);
+                switch (v.getId()) {
+                    case R.id.commander:
+                        CommanderFragment commanderFragment = new CommanderFragment();
+                        FragmentManager manager = getActivity().getSupportFragmentManager();
+                        manager.beginTransaction().replace(R.id.relativelayout_for_fragment, commanderFragment, commanderFragment.getTag()).commit();
+                        break;
+                }
 
 
 
