@@ -2,6 +2,8 @@ package com.tp1.DocHome;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -40,6 +42,8 @@ public class RegisterActivity extends AppCompatActivity {
         final int month = c.get(Calendar.MONTH);
         final int day = c.get(Calendar.DAY_OF_MONTH);
 
+
+
         idprenom = (EditText) findViewById(R.id.idprenom);
         idnom = (EditText) findViewById(R.id.idnom);
         iddatedenaissance = (EditText) findViewById(R.id.iddatedenaissance);
@@ -57,7 +61,8 @@ public class RegisterActivity extends AppCompatActivity {
                 DatePickerDialog birthdate = new DatePickerDialog(RegisterActivity.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                        iddatedenaissance.setText(year + "/ " + month + "/ " + dayOfMonth);
+                        int month1=month+1;
+                        iddatedenaissance.setText(dayOfMonth + "/ " + month1 + "/ " + year);
                     }
                 }, year, month, day);
                 birthdate.setTitle("Sélectionner votre date de naissance");
@@ -79,20 +84,24 @@ public class RegisterActivity extends AppCompatActivity {
             String email =idemail.getText().toString();
 
 
+            //if (prenom.equals("") || nom.equals("")  || motdepasse.equals("") || telephone.equals("") || email.equals("") || motdepasse.equals("") || confirmationmotdepasse.equals("")) {
+              //  Toast.makeText(this, "Vous avez oublié de remplir des champs", Toast.LENGTH_SHORT).show();
+
+            //}
+
+            // else if (!motdepasse.equals(confirmationmotdepasse)){
+               // Toast.makeText(this, "Vos mot de passe sont différents", Toast.LENGTH_SHORT).show();
+        //}
+          //  else {
+                    SharedPreferences sharedpreferences = PreferenceManager.getDefaultSharedPreferences(this);
+                    SharedPreferences.Editor editor = sharedpreferences.edit();
+                    editor.putBoolean("connected", true);
+                    editor.commit();
+                    startActivity(new Intent(this, TutoActivity.class));
+                //}
 
 
-            //if (prenom.equals("") || nom.equals("")  || motdepasse.equals("") || telephone.equals("") || email.equals("") || confirmationmotdepasse.equals("")) {
-               // Toast.makeText(this, "Vous avez oublié de remplir des champs", Toast.LENGTH_SHORT).show();
-           // }
 
-            /*if (etpasswordcheck.equals(etPasswordstr)){
-                Toast.makeText(this,"Le mot de passe n'est pas comfirmé", Toast.LENGTH_SHORT);
-            }*/
-
-            //else {
-
-        startActivity(new Intent(this, TutoActivity.class));
-    //}
 }}
 
 

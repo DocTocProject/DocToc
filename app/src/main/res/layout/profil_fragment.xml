@@ -29,46 +29,30 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-
-            <EditText
-                android:id="@+id/profil_allergie"
+            <Spinner
+                android:id="@+id/spinner1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="10pt"
-                android:hint="Mes allergies :"
-                android:imeOptions="actionNext"
-                android:singleLine="true" />
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal" />
 
         </android.support.design.widget.TextInputLayout>
+
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+
             <EditText
-                android:id="@+id/profil_operation"
+                android:id="@+id/descpription"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="10pt"
-                android:hint="Mes opérations : "
+                android:hint="Description"
                 android:imeOptions="actionNext"
+                android:inputType="date"
+                android:maxLength="200"
                 android:singleLine="true" />
-
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/profil_traitement"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="10pt"
-                android:hint="Mes Traitements : "
-                android:imeOptions="actionNext"
-                android:singleLine="true" />
-
         </android.support.design.widget.TextInputLayout>
 
 
