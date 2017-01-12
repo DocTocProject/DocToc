@@ -19,7 +19,7 @@ public class DocHomeApplication extends Application implements Application.Activ
     @Override
     public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
 
-        /*if (activity instanceof MenuActivity) {
+        if (activity instanceof MenuActivity) {
             SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
             boolean isconnected = pref.getBoolean("connected", false);
             if (isconnected == false) {
@@ -30,7 +30,7 @@ public class DocHomeApplication extends Application implements Application.Activ
             } else {
 
             }
-        }*/
+        }
     }
 
 
