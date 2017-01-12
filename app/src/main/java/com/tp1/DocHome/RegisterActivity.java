@@ -81,20 +81,21 @@ public class RegisterActivity extends AppCompatActivity {
             String email =idemail.getText().toString();
 
 
-            if (prenom.equals("") || nom.equals("")  || motdepasse.equals("") || telephone.equals("") || email.equals("") || motdepasse.equals("") || confirmationmotdepasse.equals("")) {
-                Toast.makeText(this, "Vous avez oublié de remplir des champs", Toast.LENGTH_SHORT).show();
+            //if (prenom.equals("") || nom.equals("")  || motdepasse.equals("") || telephone.equals("") || email.equals("") || motdepasse.equals("") || confirmationmotdepasse.equals("")) {
+              //  Toast.makeText(this, "Vous avez oublié de remplir des champs", Toast.LENGTH_SHORT).show();
 
-            }
+            //}
 
-            else if (!motdepasse.equals(confirmationmotdepasse)){
-                Toast.makeText(this, "Vos mot de passe sont différents", Toast.LENGTH_SHORT).show();
-        }
-            else {
+            // else if (!motdepasse.equals(confirmationmotdepasse)){
+               // Toast.makeText(this, "Vos mot de passe sont différents", Toast.LENGTH_SHORT).show();
+        //}
+          //  else {
                     SharedPreferences sharedpreferences = PreferenceManager.getDefaultSharedPreferences(this);
                     SharedPreferences.Editor editor = sharedpreferences.edit();
                     editor.putBoolean("connected", true);
+                    editor.commit();
                     startActivity(new Intent(this, TutoActivity.class));
-                }
+                //}
 
 
 
