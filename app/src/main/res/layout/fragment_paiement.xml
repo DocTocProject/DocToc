@@ -33,7 +33,7 @@
         </android.support.design.widget.TextInputLayout>
 
 
-        <android.support.design.widget.TextInputLayout
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -41,30 +41,38 @@
             <EditText
                 android:id="@+id/num_carte"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="100dp"
                 android:layout_marginBottom="10pt"
                 android:hint="Numero de carte"
+                android:textSize="30dp"
                 android:imeOptions="actionNext"
                 android:inputType="date"
                 android:maxLength="14"
                 android:singleLine="true" />
-        </android.support.design.widget.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
+
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Date d'expiration"
+            android:textSize="30dp"
+            android:fontFamily="sans-serif-light"
+            android:layout_height="wrap_content"
+            />
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
             <EditText
-                android:id="@+id/expiration"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="10pt"
-                android:hint="Date d'expiration(MM/AA)"
-                android:imeOptions="actionNext"
-                android:inputType="date"
-                android:maxLength="14"
-                android:singleLine="true" />
 
+                android:id="@+id/iddateexpiration"
+                android:fontFamily="sans-serif-light"
+                android:imeOptions="actionNext"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content" />
         </android.support.design.widget.TextInputLayout>
 
 

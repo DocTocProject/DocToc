@@ -63,6 +63,8 @@
             android:layout_height="wrap_content">
         <EditText
             android:id="@+id/iddatedenaissance"
+            android:maxLength="11"
+            android:inputType="date"
             android:fontFamily="sans-serif-light"
             android:imeOptions="actionNext"
             android:layout_width="match_parent"
