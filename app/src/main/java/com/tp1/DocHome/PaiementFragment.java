@@ -47,6 +47,9 @@ public class PaiementFragment extends Fragment implements AdapterView.OnItemSele
         final int month = c.get(Calendar.MONTH);
         final int day = c.get(Calendar.DAY_OF_MONTH);
 
+
+
+
         iddateexpiration = (EditText) rootView.findViewById(R.id.iddateexpiration);
 
         iddateexpiration.setOnClickListener(new View.OnClickListener() {
@@ -55,7 +58,8 @@ public class PaiementFragment extends Fragment implements AdapterView.OnItemSele
                 DatePickerDialog birthdate = new DatePickerDialog(getContext(), new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                        iddateexpiration.setText(year + "/ " + month + "/ " + dayOfMonth);
+                        int month1=month+1;
+                        iddateexpiration.setText(dayOfMonth + "/ " + month1 + "/ " + year);
                     }
                 }, year, month, day);
                 birthdate.setTitle("Sélectionner votre date d'expiration");
@@ -74,7 +78,7 @@ public class PaiementFragment extends Fragment implements AdapterView.OnItemSele
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         TextView myText=(TextView) view;
-        Toast.makeText(getContext(),"Choissir"+myText.getText(),Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(),"Choisir"+myText.getText(),Toast.LENGTH_SHORT).show();
     }
 
     @Override

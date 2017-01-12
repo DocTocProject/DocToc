@@ -42,6 +42,8 @@ public class RegisterActivity extends AppCompatActivity {
         final int month = c.get(Calendar.MONTH);
         final int day = c.get(Calendar.DAY_OF_MONTH);
 
+
+
         idprenom = (EditText) findViewById(R.id.idprenom);
         idnom = (EditText) findViewById(R.id.idnom);
         iddatedenaissance = (EditText) findViewById(R.id.iddatedenaissance);
@@ -59,7 +61,8 @@ public class RegisterActivity extends AppCompatActivity {
                 DatePickerDialog birthdate = new DatePickerDialog(RegisterActivity.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                        iddatedenaissance.setText(year + "/ " + month + "/ " + dayOfMonth);
+                        int month1=month+1;
+                        iddatedenaissance.setText(dayOfMonth + "/ " + month1 + "/ " + year);
                     }
                 }, year, month, day);
                 birthdate.setTitle("Sélectionner votre date de naissance");
