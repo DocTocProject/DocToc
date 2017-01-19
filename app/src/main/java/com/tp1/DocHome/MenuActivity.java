@@ -93,15 +93,13 @@ public class MenuActivity extends AppCompatActivity
             FragmentManager manager = getSupportFragmentManager();
             manager.beginTransaction().replace(R.id.relativelayout_for_fragment, mapFragment, mapFragment.getTag()).commit();
 
-            Toast.makeText(this, "Accueil", Toast.LENGTH_SHORT).show();
+
 
 
         } else if (id == R.id.nav_historique) {
             HistoriqueFragment historiqueFragment = new HistoriqueFragment();
             FragmentManager manager = getSupportFragmentManager();
             manager.beginTransaction().replace(R.id.relativelayout_for_fragment, historiqueFragment, historiqueFragment.getTag()).commit();
-
-            Toast.makeText(this, "Historique", Toast.LENGTH_SHORT).show();
 
 
 
@@ -110,21 +108,19 @@ public class MenuActivity extends AppCompatActivity
             FragmentManager manager = getSupportFragmentManager();
             manager.beginTransaction().replace(R.id.relativelayout_for_fragment, profilFragment, profilFragment.getTag()).commit();
 
-            Toast.makeText(this, "Profil", Toast.LENGTH_SHORT).show();
 
         } else if (id == R.id.nav_carnet) {
             CarnetFragment carnetFragment = new CarnetFragment();
             FragmentManager manager = getSupportFragmentManager();
             manager.beginTransaction().replace(R.id.relativelayout_for_fragment, carnetFragment, carnetFragment.getTag()).commit();
 
-            Toast.makeText(this, "Carnet de santé", Toast.LENGTH_SHORT).show();
+
 
         } else if (id == R.id.nav_paiement) {
             PaiementFragment paiementFragment = new PaiementFragment();
             FragmentManager manager = getSupportFragmentManager();
             manager.beginTransaction().replace(R.id.relativelayout_for_fragment, paiementFragment, paiementFragment.getTag()).commit();
 
-            Toast.makeText(this, "Paiement", Toast.LENGTH_SHORT).show();
 
         } else if (id == R.id.nav_deconnection) {
             startActivity(new Intent(this, FirstActivity.class));
