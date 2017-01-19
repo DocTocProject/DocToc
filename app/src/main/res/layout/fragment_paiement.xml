@@ -16,6 +16,7 @@
             android:layout_marginBottom="15dp"
             android:layout_marginTop="15dp"
             android:text="Ajouter ma carte"
+            android:textStyle="bold"
             android:textColor="@color/bleu"
             android:textSize="15pt"></TextView>
 
@@ -28,8 +29,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:text="Choisir le type de carte"
-                android:textSize="15dp"
-                android:textStyle="bold"
+                android:textSize="20dp"
                 android:fontFamily="sans-serif-light"
                 android:layout_height="wrap_content"
                 />
@@ -38,45 +38,42 @@
                 android:id="@+id/spinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="20dp"
                 android:layout_gravity="center_horizontal" />
 
         </android.support.design.widget.TextInputLayout>
 
 
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Numéro de carte"
+            android:textSize="20dp"
+            android:fontFamily="sans-serif-light"
+            android:layout_height="wrap_content"
+            />
 
             <EditText
                 android:id="@+id/num_carte"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginBottom="10pt"
-                android:hint="Numero de carte"
-                android:textStyle="bold"
-                android:textSize="25dp"
+                android:fontFamily="sans-serif-light"
                 android:imeOptions="actionNext"
-                android:inputType="date"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:inputType="number"
                 android:maxLength="14"
-                android:singleLine="true" />
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"
+                />
 
-
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
 
         <TextView
             android:layout_width="wrap_content"
             android:text="Date d'expiration"
-            android:textStyle="bold"
-            android:textSize="25dp"
+            android:textSize="20dp"
             android:fontFamily="sans-serif-light"
             android:layout_height="wrap_content"
             />
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+
             <EditText
 
                 android:id="@+id/iddateexpiration"
@@ -85,7 +82,7 @@
                 android:layout_width="match_parent"
                 android:layout_marginBottom="10dp"
                 android:layout_height="wrap_content" />
-        </android.support.design.widget.TextInputLayout>
+
 
 
 

@@ -30,8 +30,6 @@ public class RegisterActivity extends AppCompatActivity {
     EditText idemail;
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,8 +40,6 @@ public class RegisterActivity extends AppCompatActivity {
         final int month = c.get(Calendar.MONTH);
         final int day = c.get(Calendar.DAY_OF_MONTH);
 
-
-
         idprenom = (EditText) findViewById(R.id.idprenom);
         idnom = (EditText) findViewById(R.id.idnom);
         iddatedenaissance = (EditText) findViewById(R.id.iddatedenaissance);
@@ -52,8 +48,6 @@ public class RegisterActivity extends AppCompatActivity {
         idmotdepasse = (EditText) findViewById(R.id.idmotdepasse);
         idconfirmationmotdepasse = (EditText) findViewById(R.id.idconfirmationmotdepasse);
         idradiogroup = (RadioGroup) findViewById(R.id.idradiogroup);
-
-
 
         iddatedenaissance.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,12 +80,12 @@ public class RegisterActivity extends AppCompatActivity {
 
             if (prenom.equals("") || nom.equals("")  || motdepasse.equals("") || telephone.equals("") || email.equals("") || motdepasse.equals("") || confirmationmotdepasse.equals("")) {
                 Toast.makeText(this, "Vous avez oublié de remplir des champs", Toast.LENGTH_SHORT).show();
-
             }
 
              else if (!motdepasse.equals(confirmationmotdepasse)){
                Toast.makeText(this, "Vos mot de passe sont différents", Toast.LENGTH_SHORT).show();
-        } else {
+
+            } else {
                     SharedPreferences sharedpreferences = PreferenceManager.getDefaultSharedPreferences(this);
                     SharedPreferences.Editor editor = sharedpreferences.edit();
                     editor.putBoolean("connected", true);
