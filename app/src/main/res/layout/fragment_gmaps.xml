@@ -6,19 +6,36 @@
 
     <fragment
         android:id="@+id/map"
+        class="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        class="com.google.android.gms.maps.SupportMapFragment"
         tools:layout="@layout/fragment_gmaps" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
     <EditText
+        android:id="@+id/Address"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:inputType="textPostalAddress"
+        android:background="@color/common_google_signin_btn_text_dark_default"
         android:ems="10"
         android:hint="Address"
-        android:background="@color/common_google_signin_btn_text_dark_default"
-        android:id="@+id/Address" />
+        android:inputType="textPostalAddress" />
+
+        <Button
+            android:id="@+id/search"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="right"
+            android:background="@color/bleu"
+
+            android:text="search "
+            android:textColor="@color/blanc" />
+    </LinearLayout>
 
 
     <Button

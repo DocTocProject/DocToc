@@ -1,16 +1,10 @@
 package com.tp1.DocHome;
 
-import android.content.Context;
-import android.content.Intent;
-import android.graphics.Color;
 import android.location.Address;
 import android.location.Geocoder;
-import android.location.Location;
-import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,18 +12,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapFragment;
-import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.MapsInitializer;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
-import com.google.android.gms.maps.model.CameraPosition;
-import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -39,6 +26,8 @@ import java.util.List;
 
 public class GMapsFragment extends Fragment implements OnMapReadyCallback {
     SupportMapFragment mMapView;
+    double lat;
+    double lng;
     private GoogleMap googleMap;
     private EditText edit;
 
@@ -106,24 +95,29 @@ public class GMapsFragment extends Fragment implements OnMapReadyCallback {
 
 
     private void initMap() {
-        // latitude and longitude
-        double latitude = 48.866667;
-        double longitude = 2.333333;
+        //String location = edit.getText().toString();
+        String location = "rue des pinsons ,94000 CRETEIL ";
+        Geocoder geocoder = new Geocoder(getActivity());
+        List<Address> addressList = null;
+        try {
+            addressList = geocoder.getFromLocationName(location, 1);
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        Address address = addressList.get(0);
+        String locality = address.getLocality();
+        Toast.makeText(getActivity(), locality, Toast.LENGTH_SHORT).show();
 
-        // create marker
-        MarkerOptions marker = new MarkerOptions().position(
-                new LatLng(latitude, longitude)).title("Hello Maps");
+        lat = address.getLatitude();
+        lng = address.getLongitude();
+        LatLng ll = new LatLng(lat, lng);
+        //Text.setText( String.format( "Value of a: %.2f", lat ) );
 
-        // Changing marker icon
-        marker.icon(BitmapDescriptorFactory
-                .defaultMarker(BitmapDescriptorFactory.HUE_ROSE));
-
-        // adding marker
-        googleMap.addMarker(marker);
-        CameraPosition cameraPosition = new CameraPosition.Builder()
-                .target(new LatLng(48.866667, 2.333333)).zoom(12).build();
-        googleMap.animateCamera(CameraUpdateFactory
-                .newCameraPosition(cameraPosition));
+        // Log.d("###########", "Value: " + Double.toString(lat));
+        googleMap.addMarker(new MarkerOptions()       //line 89
+                .position((ll)));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom((ll), 15));
     }
 
 
