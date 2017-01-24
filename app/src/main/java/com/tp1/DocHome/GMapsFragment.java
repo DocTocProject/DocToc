@@ -17,6 +17,8 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapsInitializer;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -30,6 +32,8 @@ public class GMapsFragment extends Fragment implements OnMapReadyCallback {
     double lng;
     private GoogleMap googleMap;
     private EditText edit;
+    private Button commander;
+    private Button search;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -38,17 +42,18 @@ public class GMapsFragment extends Fragment implements OnMapReadyCallback {
 
         View v = inflater.inflate(R.layout.fragment_gmaps, container,
                 false);
-        Button commander = (Button) v.findViewById(R.id.commander);
+        commander = (Button) v.findViewById(R.id.commander);
+        search = (Button) v.findViewById(R.id.search);
         edit=(EditText)  v.findViewById(R.id.Address);
+        mMapView = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
+        mMapView.onCreate(savedInstanceState);
+
+        mMapView.onResume();// needed to get the map to display immediately
+
         commander.setOnClickListener(new View.OnClickListener()
 
         {
 
-            /**
-             * Called when a view has been clicked.
-             *
-             * @param v The view that was clicked.
-             */
             @Override
             public void onClick(View v) {
                 switch (v.getId()) {
@@ -58,33 +63,41 @@ public class GMapsFragment extends Fragment implements OnMapReadyCallback {
                         manager.beginTransaction().replace(R.id.relativelayout_for_fragment, commanderFragment, commanderFragment.getTag()).commit();
                         break;
                 }
-
-
-
-
             }
-
-
         });
 
-        mMapView = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
-        mMapView.onCreate(savedInstanceState);
-
-        mMapView.onResume();// needed to get the map to display immediately
-
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onSearch();
+            }
+        });
         try {
             MapsInitializer.initialize(getActivity().getApplicationContext());
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        mMapView.getMapAsync(new OnMapReadyCallback() {
-            @Override
-            public void onMapReady(GoogleMap map) {
-                googleMap = map;
-                initMap();
-            }
-        });
+        googleMap = mMapView.getMap();
+        // latitude and longitude
+        double latitude = 17.385044;
+        double longitude = 78.486671;
+
+        // create marker
+        MarkerOptions marker = new MarkerOptions().position(
+                new LatLng(latitude, longitude)).title("Hello Maps");
+
+        // Changing marker icon
+        marker.icon(BitmapDescriptorFactory
+                .defaultMarker(BitmapDescriptorFactory.HUE_ROSE));
+
+        // adding marker
+        googleMap.addMarker(marker);
+        CameraPosition cameraPosition = new CameraPosition.Builder()
+                .target(new LatLng(17.385044, 78.486671)).zoom(12).build();
+        googleMap.animateCamera(CameraUpdateFactory
+                .newCameraPosition(cameraPosition));
+
 
 
 
@@ -93,33 +106,27 @@ public class GMapsFragment extends Fragment implements OnMapReadyCallback {
     }
 
 
-
-    private void initMap() {
-        //String location = edit.getText().toString();
-        String location = "rue des pinsons ,94000 CRETEIL ";
-        Geocoder geocoder = new Geocoder(getActivity());
+    private void onSearch() {
+        String location = edit.getText().toString();
         List<Address> addressList = null;
-        try {
-            addressList = geocoder.getFromLocationName(location, 1);
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+        if (location != null || !location.equals("")) {
+            Geocoder geocoder = new Geocoder(getActivity());
+            try {
+                addressList = geocoder.getFromLocationName(location, 1);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            Address address = addressList.get(0);
+            String locality = address.getLocality();
+            Toast.makeText(getActivity(), locality, Toast.LENGTH_SHORT).show();
+
+            lat = address.getLatitude();
+            lng = address.getLongitude();
+            LatLng latLng = new LatLng(lat, lng);
+            googleMap.addMarker(new MarkerOptions().position(latLng).title("Marker"));
+            googleMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
         }
-        Address address = addressList.get(0);
-        String locality = address.getLocality();
-        Toast.makeText(getActivity(), locality, Toast.LENGTH_SHORT).show();
-
-        lat = address.getLatitude();
-        lng = address.getLongitude();
-        LatLng ll = new LatLng(lat, lng);
-        //Text.setText( String.format( "Value of a: %.2f", lat ) );
-
-        // Log.d("###########", "Value: " + Double.toString(lat));
-        googleMap.addMarker(new MarkerOptions()       //line 89
-                .position((ll)));
-        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom((ll), 15));
     }
-
 
 
     @Override

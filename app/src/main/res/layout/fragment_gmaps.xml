@@ -17,10 +17,10 @@
         android:orientation="horizontal">
     <EditText
         android:id="@+id/Address"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_width="287dp"
+        android:layout_height="wrap_content"
+
         android:background="@color/common_google_signin_btn_text_dark_default"
-        android:ems="10"
         android:hint="Address"
         android:inputType="textPostalAddress" />
 
@@ -29,12 +29,14 @@
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:layout_gravity="right"
             android:background="@color/bleu"
+            android:onClick="InitMap"
 
             android:text="search "
             android:textColor="@color/blanc" />
+
+
     </LinearLayout>
 
 
@@ -47,5 +49,6 @@
         android:text="Commandez ici "
 
         android:textColor="@color/blanc" />
+
 
 </RelativeLayout>
