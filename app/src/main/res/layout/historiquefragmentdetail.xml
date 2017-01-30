@@ -14,21 +14,14 @@
         android:layout_marginBottom="10dp"/>
 
     <TextView
-        android:text="Medicaments Recommendées"
+        android:text="Diagnostique"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView2"
         android:layout_marginBottom="10dp"/>
 
     <TextView
-        android:text="Resultats"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView3"
-        android:layout_marginBottom="10dp"/>
-
-    <TextView
-        android:text="Treatmente effectués"
+        android:text="Traitement"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView4"

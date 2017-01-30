@@ -13,7 +13,6 @@ public class HistoriqueFragmentdetail extends Fragment{
 
         TextView textView;
         TextView textView2;
-        TextView textView3;
         TextView textView4;
 
         @Override
@@ -23,7 +22,6 @@ public class HistoriqueFragmentdetail extends Fragment{
 
             textView= (TextView)rootView.findViewById(R.id.textView);
             textView2= (TextView)rootView.findViewById(R.id.textView2);
-            textView3= (TextView)rootView.findViewById(R.id.textView3);
             textView4= (TextView)rootView.findViewById(R.id.textView4);
             return rootView;
 

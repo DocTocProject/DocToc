@@ -1,55 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:orientation="vertical"
-        android:layout_height="match_parent"
-        android:padding="10dp"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
-        >
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/buttonR"
+        android:layout_alignStart="@+id/buttonR"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@color/bleu"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_weight="0.09"
+        android:text="Historique de vos consultations "
+        />
 
-        <Button
-            android:text="Consultation du docteur"
-            android:textColor="@color/bleu"
-            android:textStyle="bold"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/button"
-            android:layout_marginBottom="10dp"/>
 
-        <Button
-            android:text="Consultation du docteur"
-            android:textColor="@color/bleu"
-            android:textStyle="bold"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/button2"
-            android:layout_marginBottom="10dp"/>
+    <Button
+        android:text="Date / Nom du Docteur"
+        android:textColor="@color/bleu"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:layout_marginBottom="10dp"/>
 
-        <Button
-            android:text="Consultation du docteur"
-            android:textColor="@color/bleu"
-            android:textStyle="bold"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/button3"
-            android:layout_marginBottom="10dp"/>
+    <Button
+        android:text="Date / Nom du Docteur"
+        android:textColor="@color/bleu"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:layout_marginBottom="10dp"/>
 
-        <Button
-            android:text="Consultation du docteur"
-            android:textColor="@color/bleu"
-            android:textStyle="bold"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/button4"
-            android:layout_marginBottom="10dp"/>
+    <Button
+        android:text="Date / Nom du Docteur"
+        android:textColor="@color/bleu"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button3"
+        android:layout_marginBottom="10dp"/>
 
-        <Button
-            android:text="Consultation du docteur "
-            android:textColor="@color/bleu"
-            android:textStyle="bold"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/button5" />
+    <Button
+        android:text="Date / Nom du Docteur"
+        android:textColor="@color/bleu"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button4"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:text="Date / Nom du Docteur"
+        android:textColor="@color/bleu"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button5" />
 
 
 </LinearLayout>
+
+</ScrollView>
