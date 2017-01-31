@@ -80,12 +80,12 @@ public class GMapsFragment extends Fragment implements OnMapReadyCallback {
 
         googleMap = mMapView.getMap();
         // latitude and longitude
-        double latitude = 17.385044;
-        double longitude = 78.486671;
-
+        double latitude = 48.845281;
+        double longitude = 2.328421;
+        //48.845281, 2.328421
         // create marker
         MarkerOptions marker = new MarkerOptions().position(
-                new LatLng(latitude, longitude)).title("Hello Maps");
+                new LatLng(latitude, longitude)).title("Paris");
 
         // Changing marker icon
         marker.icon(BitmapDescriptorFactory
@@ -94,7 +94,7 @@ public class GMapsFragment extends Fragment implements OnMapReadyCallback {
         // adding marker
         googleMap.addMarker(marker);
         CameraPosition cameraPosition = new CameraPosition.Builder()
-                .target(new LatLng(17.385044, 78.486671)).zoom(12).build();
+                .target(new LatLng(48.845281, 2.328421)).zoom(12).build();
         googleMap.animateCamera(CameraUpdateFactory
                 .newCameraPosition(cameraPosition));
 
@@ -123,7 +123,7 @@ public class GMapsFragment extends Fragment implements OnMapReadyCallback {
             lat = address.getLatitude();
             lng = address.getLongitude();
             LatLng latLng = new LatLng(lat, lng);
-            googleMap.addMarker(new MarkerOptions().position(latLng).title("Marker"));
+            googleMap.addMarker(new MarkerOptions().position(latLng).title("Marker in Paris"));
             googleMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
         }
     }
