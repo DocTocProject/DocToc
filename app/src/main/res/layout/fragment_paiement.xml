@@ -16,9 +16,9 @@
             android:layout_marginBottom="15dp"
             android:layout_marginTop="15dp"
             android:text="Ajouter ma carte"
-            android:textStyle="bold"
             android:textColor="@color/bleu"
-            android:textSize="15pt"></TextView>
+            android:textSize="15pt"
+            android:textStyle="bold"></TextView>
 
 
         <android.support.design.widget.TextInputLayout
@@ -28,60 +28,59 @@
 
             <TextView
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
                 android:text="Choisir le type de carte"
                 android:textSize="20dp"
-                android:fontFamily="sans-serif-light"
-                android:layout_height="wrap_content"
                 />
 
             <Spinner
                 android:id="@+id/spinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:layout_gravity="center_horizontal" />
+                android:layout_gravity="center_horizontal"
+                android:textSize="20dp" />
 
         </android.support.design.widget.TextInputLayout>
 
 
         <TextView
             android:layout_width="wrap_content"
-            android:text="Numéro de carte"
-            android:textSize="20dp"
-            android:fontFamily="sans-serif-light"
             android:layout_height="wrap_content"
-            />
+            android:fontFamily="sans-serif-light"
+            android:text="Numéro de carte"
+            android:textSize="20dp" />
 
-            <EditText
-                android:id="@+id/num_carte"
-                android:fontFamily="sans-serif-light"
-                android:imeOptions="actionNext"
-                android:textStyle="bold"
-                android:textSize="20dp"
-                android:inputType="number"
-                android:maxLength="14"
-                android:layout_width="match_parent"
-                android:layout_marginBottom="10dp"
-                android:layout_height="wrap_content"
-                />
+        <EditText
+            android:id="@+id/num_carte"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif-light"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="14"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            />
 
 
         <TextView
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
             android:text="Date d'expiration"
             android:textSize="20dp"
-            android:fontFamily="sans-serif-light"
-            android:layout_height="wrap_content"
             />
 
-            <EditText
+        <EditText
 
-                android:id="@+id/iddateexpiration"
-                android:fontFamily="sans-serif-light"
-                android:imeOptions="actionNext"
-                android:layout_width="match_parent"
-                android:layout_marginBottom="10dp"
-                android:layout_height="wrap_content" />
+            android:id="@+id/iddateexpiration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif-light"
+            android:imeOptions="actionNext" />
 
 
 
@@ -94,6 +93,20 @@
             android:onClick="OnClickRegister"
             android:text="Ajouter"
             android:textColor="@color/blanc" />
+
+        <TextView
+            android:id="@+id/viewCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" sdasdasd"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/viewDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" sdasdasd"
+            android:textSize="20dp" />
 
     </LinearLayout>
 
