@@ -1,7 +1,9 @@
 package com.tp1.DocHome;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
@@ -24,6 +26,7 @@ public class MenuActivity extends AppCompatActivity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        FirstActivity.fa.finish();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -125,6 +128,14 @@ public class MenuActivity extends AppCompatActivity
         } else if (id == R.id.nav_deconnection) {
             startActivity(new Intent(this, FirstActivity.class));
                 Toast.makeText(this, " Vous êtes déconnecté !", Toast.LENGTH_SHORT).show();
+            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+            prefs.edit().putBoolean("connected", false).commit();
+            prefs.edit().remove("email").commit();
+            prefs.edit().remove("last_name").commit();
+            prefs.edit().remove("first_name").commit();
+            prefs.edit().remove("sex").commit();
+            prefs.edit().remove("telephone").commit();
+            finish();
             }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

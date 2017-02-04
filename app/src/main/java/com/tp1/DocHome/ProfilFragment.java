@@ -19,6 +19,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -47,12 +48,12 @@ public class ProfilFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        sharedPreferences = this.getActivity().getSharedPreferences(MYPREFERENCES, Context.MODE_PRIVATE);
-        stringnom = sharedPreferences.getString(NOM, "");
+       /*sharedPreferences = this.getActivity().getSharedPreferences(MYPREFERENCES, Context.MODE_PRIVATE);
+         stringnom = sharedPreferences.getString(NOM, "");
         stringprenom = sharedPreferences.getString(PRENOM, "");
         stringsexe = sharedPreferences.getString(SEXE, "");
-        stringtelephone = sharedPreferences.getString(TELEPHONE, "");
-        stringemail = sharedPreferences.getString(EMAIL, "");
+        stringtelephone = sharedPreferences.getString(TELEPHONE, "");*/
+
 
     }
 
@@ -60,19 +61,28 @@ public class ProfilFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_profil, container, false);
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getContext());
+
         profil_prenom = (EditText) view.findViewById(R.id.prenom);
         profil_nom = (EditText) view.findViewById(R.id.nom);
         profil_sexe = (EditText) view.findViewById(R.id.sexe);
         profil_telephone = (EditText) view.findViewById(R.id.numerodetelephone);
         profil_email = (EditText) view.findViewById(R.id.email);
+        String email =prefs.getString("email",null);
+        String first_name =prefs.getString("first_name",null);
+        String last_name =prefs.getString("last_name",null);
+        String sex =prefs.getString("sex",null);
+        String telephone =prefs.getString("telephone",null);
 
+    if(email!=null &&  first_name!=null && last_name!=null && sex!=null && telephone!=null){
 
+        profil_prenom.setText(first_name);
+        profil_nom.setText(last_name);
+        profil_telephone.setText(telephone);
+        profil_sexe.setText(sex);
+        profil_email.setText(email);
+    }
 
-        profil_prenom.setText(stringprenom);
-        profil_nom.setText(stringnom);
-        profil_telephone.setText(stringtelephone);
-        profil_sexe.setText(stringsexe);
-        profil_email.setText(stringemail);
 
         Button buttonenregistrer = (Button) view.findViewById(R.id.benregistrer);
         buttonenregistrer.setOnClickListener(new View.OnClickListener() {

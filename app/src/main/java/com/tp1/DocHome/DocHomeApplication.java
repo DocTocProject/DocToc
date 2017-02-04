@@ -19,11 +19,11 @@ public class DocHomeApplication extends Application implements Application.Activ
     @Override
     public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
 
-        if (activity instanceof MenuActivity) {
+        if (activity instanceof FirstActivity) {
             SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
             boolean isconnected = pref.getBoolean("connected", false);
-            if (isconnected == false) {
-                Intent intent = new Intent().setClass(this, FirstActivity.class);
+            if (isconnected == true) {
+                Intent intent = new Intent().setClass(this, MenuActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
 

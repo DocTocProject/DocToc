@@ -2,6 +2,7 @@ package com.tp1.DocHome;
 
 import android.Manifest;
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -16,13 +17,14 @@ import java.util.List;
 
 
 public class FirstActivity extends AppCompatActivity {
+    public static Activity fa;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
-
+        fa = this;
 
 
 

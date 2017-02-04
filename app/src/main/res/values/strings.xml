@@ -5,6 +5,8 @@
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_menu">MenuActivity</string>
 
+    <string name="APIURL">http://10.0.2.2:8085</string>
+
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 

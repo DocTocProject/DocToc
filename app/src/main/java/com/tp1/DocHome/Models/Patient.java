@@ -92,5 +92,17 @@ public class Patient {
         this.address = address;
     }
 
-
+    @Override
+    public String toString() {
+        return "Patient{" +
+                "id=" + id +
+                ", password='" + password + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", sex='" + sex + '\'' +
+                ", telephone=" + telephone +
+                ", email='" + email + '\'' +
+                ", address='" + address + '\'' +
+                '}';
+    }
 }
