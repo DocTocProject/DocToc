@@ -12,6 +12,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,9 +21,6 @@ import android.widget.Toast;
 import java.util.Calendar;
 
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class PaiementFragment extends Fragment implements AdapterView.OnItemSelectedListener{
 
     EditText iddateexpiration;
@@ -30,6 +29,9 @@ public class PaiementFragment extends Fragment implements AdapterView.OnItemSele
     TextView numCard;
     TextView dateExp;
     Spinner spinner;
+    ImageButton removCard;
+    ImageButton removDate;
+    LinearLayout mContainerView;
 
     public PaiementFragment() {
         // Required empty public constructor
@@ -39,12 +41,17 @@ public class PaiementFragment extends Fragment implements AdapterView.OnItemSele
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View rootView =inflater.inflate(R.layout.fragment_paiement, container, false);
+        removCard = (ImageButton) rootView.findViewById(R.id.imageButton3);
+        removDate = (ImageButton) rootView.findViewById(R.id.imageButton4);
         idnumCard = (EditText) rootView.findViewById(R.id.num_carte);
         register = (Button) rootView.findViewById(R.id.ajouter);
         spinner = (Spinner) rootView.findViewById(R.id.spinner);
         numCard = (TextView) rootView.findViewById(R.id.viewCard);
         dateExp = (TextView) rootView.findViewById(R.id.viewDate);
-
+        //mContainerView=(LinearLayout) rootView.findViewById(R.id. ;
+        //removCard.setOnClickListener(this);
+        removCard.setVisibility(View.INVISIBLE);
+        removDate.setVisibility(View.INVISIBLE);
         ArrayAdapter adapter = ArrayAdapter.createFromResource(getContext(),R.array.type,R.layout.support_simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
@@ -83,15 +90,42 @@ public class PaiementFragment extends Fragment implements AdapterView.OnItemSele
             public void onClick(View v) {
                 String description1 = null;
                 String description2 = null;
+                removCard.setVisibility(View.VISIBLE);
+                removDate.setVisibility(View.VISIBLE);
 
                 description1 = idnumCard.getText().toString();
                 numCard.setText(description1);
+                idnumCard.setText("");
 
                 description2 = iddateexpiration.getText().toString();
                 dateExp.setText(description2);
+                iddateexpiration.setText("");
+            }
+        });
+        removCard.setOnClickListener(new View.OnClickListener()
+
+        {
+
+            @Override
+            public void onClick(View v) {
+
+
+                numCard.setText(" ");
+                removCard.setVisibility(View.INVISIBLE);
             }
         });
 
+        removDate.setOnClickListener(new View.OnClickListener()
+
+        {
+
+            @Override
+            public void onClick(View v) {
+
+                dateExp.setText(" ");
+                removDate.setVisibility(View.INVISIBLE);
+            }
+        });
         //end
         return rootView;
 
