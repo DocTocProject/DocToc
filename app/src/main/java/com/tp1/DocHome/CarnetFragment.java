@@ -39,7 +39,7 @@ public class CarnetFragment extends Fragment implements AdapterView.OnItemSelect
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View rootView =inflater.inflate(R.layout.profil_fragment, container, false);
+        View rootView =inflater.inflate(R.layout.carnetsante_fragment, container, false);
         register = (Button) rootView.findViewById(R.id.benregistrer);
         spinner = (Spinner) rootView.findViewById(R.id.spinner1);
         et1 = (EditText) rootView.findViewById(R.id.editText);
@@ -74,7 +74,7 @@ public class CarnetFragment extends Fragment implements AdapterView.OnItemSelect
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int position, long id) {
                 TextView myText = (TextView) view;
-                Toast.makeText(getContext(), "Choissir" + myText.getText(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Choisir" + myText.getText(), Toast.LENGTH_SHORT).show();
 
                 value = parent.getItemAtPosition(position);
                 switch (position) {
