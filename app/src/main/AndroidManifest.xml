@@ -14,7 +14,7 @@
     <application
         android:name=".DocHomeApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/logoapp"
         android:label="DocToc"
         android:supportsRtl="true"
         android:theme="@style/MyMaterialTheme">
