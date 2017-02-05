@@ -13,7 +13,6 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,7 +30,7 @@ public class PaiementFragment extends Fragment implements AdapterView.OnItemSele
     Spinner spinner;
     ImageButton removCard;
     ImageButton removDate;
-    LinearLayout mContainerView;
+
 
     public PaiementFragment() {
         // Required empty public constructor
